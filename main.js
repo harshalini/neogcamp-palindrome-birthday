@@ -154,8 +154,10 @@ function clickHandler() {
 
         var isPalindrome = allPalindromeDateFormats(date);
 
+        output.style.display = "none";
         if (isPalindrome) {
             setTimeout(() => {
+                    output.style.display = "block";
                     output.innerText = "Yippee! your birthday is a palindrome!! 🥳🤩";
                     gif.style.display = "none";
                 },
@@ -163,6 +165,7 @@ function clickHandler() {
         } else {
             var [cnd, nextDate] = nextPalindromeDate(date);
             setTimeout(() => {
+                output.style.display = "block";
                 output.innerText = "Your birthday is not a palindrome date. The next palindrome date is " + nextDate.day + "-" + nextDate.month + "-" + nextDate.year + ", you missed it by " + cnd + " days! 🙁";
                 gif.style.display = "none";
             }, 3000);

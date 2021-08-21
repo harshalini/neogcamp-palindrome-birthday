@@ -43,8 +43,8 @@ h1 {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 15%;
-    height: 15%;
+    width: 12%;
+    height: 12%;
 }
 
 #output {
@@ -52,4 +52,13 @@ h1 {
     font-size: larger;
     margin: auto;
     margin-top: 1rem;
+}
+
+@media screen and (max-width: 400px) {
+    #img {
+        width: 40%;
+    }
+    #output {
+        margin: 1rem;
+    }
 }
